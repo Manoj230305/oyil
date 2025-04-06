@@ -1,0 +1,463 @@
+/* =================================
+------------------------------------
+  Tulen | Photography HTML Template
+  Version: 1.0
+ ------------------------------------
+ ====================================*/
+
+/*----------------------------------------*/
+/* Template default CSS
+/*----------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i&display=swap");
+
+
+html,
+body {
+	height: 100%;
+	font-family: "Montserrat", sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+/* @media (max-width: 420px) {
+	body {
+		padding-left: 60px;
+	}
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	color: #252525;
+	font-weight: 600;
+}
+
+h1 {
+	font-size: 70px;
+}
+
+h2 {
+	font-size: 36px;
+}
+
+h3 {
+	font-size: 30px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 16px;
+}
+
+p {
+	font-size: 15px;
+	color: #636363;
+	line-height: 1.8;
+}
+
+img {
+	max-width: 100%;
+}
+
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+	outline: none;
+}
+
+a:hover,
+a:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+ul,
+ol {
+	padding: 0;
+	margin: 0;
+}
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1200px;
+	}
+}
+
+/*---------------------
+   Helper CSS
+ -----------------------*/
+
+.section-title {
+	text-align: center;
+	margin-bottom: 55px;
+}
+
+.section-title img {
+	margin-bottom: 15px;
+}
+
+.section-title h2 {
+	font-weight: 400;
+	font-size: 38px;
+	text-transform: uppercase;
+}
+
+.section-title p {
+	padding-top: 15px;
+	margin-bottom: 0;
+}
+
+.set-bg {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+}
+
+.spad {
+	padding-top: 110px;
+	padding-bottom: 105px;
+}
+
+.text-white h1,
+.text-white h2,
+.text-white h3,
+.text-white h4,
+.text-white h5,
+.text-white h6,
+.text-white p,
+.text-white span,
+.text-white li,
+.text-white a {
+	color: #fff;
+}
+
+/*---------------------
+  Commom elements
+-----------------------*/
+
+.site-btn {
+	display: inline-block;
+	font-size: 16px;
+	padding: 17px 25px;
+	min-width: 170px;
+	color: #fff;
+	background: #2916e0;
+	line-height: 1;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 500;
+	border: none;
+	border-radius: 2px;
+}
+
+.site-btn i {
+	font-size: 24px;
+	position: relative;
+	top: 5px;
+	margin-left: 4px;
+}
+
+.site-btn:hover {
+	color: #fff;
+}
+
+/* Preloder */
+
+#preloder {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999999;
+	background: #000;
+}
+
+.loader {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -13px;
+	margin-left: -13px;
+	border-radius: 60px;
+	animation: loader 0.8s linear infinite;
+	-webkit-animation: loader 0.8s linear infinite;
+}
+
+@keyframes loader {
+	0% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+		border: 4px solid #f44336;
+		border-left-color: transparent;
+	}
+	50% {
+		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg);
+		border: 4px solid #673ab7;
+		border-left-color: transparent;
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+		border: 4px solid #f44336;
+		border-left-color: transparent;
+	}
+}
+
+@-webkit-keyframes loader {
+	0% {
+		-webkit-transform: rotate(0deg);
+		border: 4px solid #f44336;
+		border-left-color: transparent;
+	}
+	50% {
+		-webkit-transform: rotate(180deg);
+		border: 4px solid #673ab7;
+		border-left-color: transparent;
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		border: 4px solid #f44336;
+		border-left-color: transparent;
+	}
+}
+
+.menu-wrapper {
+	position: fixed;
+	width: 90px;
+	height: 100%;
+	left: 0;
+	top: 0;
+	-webkit-box-shadow: 14px 0px 103px rgba(0, 0, 0, 0.08);
+	box-shadow: 14px 0px 103px rgba(0, 0, 0, 0.08);
+	z-index: 999;
+	-webkit-transition: 0.4s;
+	-o-transition: 0.4s;
+	transition: 0.4s;
+}
+
+@media (max-width: 420px) {
+	.menu-wrapper {
+		width: 60px;
+	}
+}
+
+/*---------------------
+   Hero section
+ -----------------------*/
+
+.hero-section {
+	height: 100%;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px),
+(max-width: 576px) {
+	.pana-accordion {
+		display: none;
+	}
+}
+
+.pana-accordion-item,
+.hero-item {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: end;
+	-ms-flex-align: end;
+	align-items: flex-end;
+	position: relative;
+}
+
+.pana-accordion-item .pa-text,
+.hero-item .pa-text {
+	padding-left: 40px;
+	padding-bottom: 50px;
+	position: relative;
+	z-index: 5;
+	opacity: 0;
+	top: -50px;
+}
+
+.pana-accordion-item .pa-text .pa-tag,
+.hero-item .pa-text .pa-tag {
+	display: inline-block;
+	padding: 4px 20px;
+	margin-bottom: 10px;
+	font-size: 12px;
+	color: #2916e0;
+	text-transform: uppercase;
+	font-weight: 600;
+	border-radius: 2px;
+	background: #fff;
+}
+
+.pana-accordion-item .pa-text h2,
+.hero-item .pa-text h2 {
+	font-size: 60px;
+	font-weight: 700;
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px),
+only screen and (min-width: 768px) and (max-width: 991px) {
+	.pana-accordion-item .pa-text h2,
+	.hero-item .pa-text h2 {
+		font-size: 48px;
+	}
+}
+
+@media (max-width: 576px) {
+	.pana-accordion-item .pa-text h2,
+	.hero-item .pa-text h2 {
+		font-size: 36px;
+	}
+}
+
+@media (max-width: 420px) {
+	.pana-accordion-item .pa-text h2,
+	.hero-item .pa-text h2 {
+		font-size: 24px;
+	}
+}
+
+.pana-accordion-item .pa-text h4,
+.hero-item .pa-text h4 {
+	font-weight: 600;
+	color: #fff;
+	padding-top: 15px;
+}
+
+@media (max-width: 420px) {
+	.pana-accordion-item .pa-text h4,
+	.hero-item .pa-text h4 {
+		font-size: 16px;
+	}
+}
+
+.pana-accordion-item .pa-text .pa-author,
+.hero-item .pa-text .pa-author {
+	overflow: hidden;
+}
+
+.pana-accordion-item .pa-text .pa-author img,
+.hero-item .pa-text .pa-author img {
+	width: 60px;
+	height: 60px;
+	float: left;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.pana-accordion-item.active .pa-text,
+.hero-item.active .pa-text {
+	opacity: 1;
+	top: 0;
+	-webkit-transition: all 0.4s ease 0.4s;
+	-o-transition: all 0.4s ease 0.4s;
+	transition: all 0.4s ease 0.4s;
+}
+
+.pana-accordion-item.active:after,
+.hero-item.active:after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	left: 0;
+	bottom: 0;
+	background: black;
+	background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.8211659664)), color-stop(94%, rgba(0, 0, 0, 0)));
+	background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.8211659664) 0%, rgba(0, 0, 0, 0) 94%);
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.8211659664) 0%, rgba(0, 0, 0, 0) 94%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
+}
+
+.hero-slider-warp {
+	height: 100%;
+	display: none;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px),
+(max-width: 576px) {
+	.hero-slider-warp {
+		display: block;
+	}
+}
+
+.hero-slider {
+	height: 100%;
+}
+
+.hero-slider .owl-stage-outer,
+.hero-slider .owl-stage,
+.hero-slider .owl-item,
+.hero-slider .pana-accordion-item,
+.hero-slider .hero-item {
+	height: 100%;
+}
+
+.hero-item {
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	text-align: center;
+	padding: 0 15px;
+}
+
+.hero-item .pa-text {
+	padding-left: 0;
+	padding-bottom: 0;
+}
+
+.hero-item .pa-text h4 {
+	display: inline-block;
+}
+
+.hero-item .pa-text .pa-author img {
+	float: none;
+	display: inline-block;
+}
+
+.owl-item.active .hero-item .pa-text {
+	opacity: 1;
+	top: 0;
+	-webkit-transition: all 0.4s ease 0.4s;
+	-o-transition: all 0.4s ease 0.4s;
+	transition: all 0.4s ease 0.4s;
+}
+
+.owl-item.active .hero-item:after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	bottom: 0;
+	background: #000000;
+	opacity: 0.5;
+}
