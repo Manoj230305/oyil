@@ -27,7 +27,15 @@
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- Owl Carousel JS (add before closing </body>) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -70,38 +78,28 @@
 
 
     <!-- Header Start -->
-    <div class="container-fluid hero-header bg-light py-5 mb-5">
-        <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6">
-                    <p class="text-primary text-uppercase mb-2 animated slideInDown">Welcome To Oyil Photography</p>
-                    <h1 class="display-4 mb-3 animated slideInDown">One of the finest photography company</h1>
-                    <p class="animated slideInDown">"Focusing on life's precious moments, one frame at a time. Capturing memories that last a lifetime."
-                    </p>
-                    <div class="d-flex align-items-center pt-4 animated slideInDown">
-                        <a href="" class="btn btn-primary py-3 px-4 me-5">Explore More</a>
-                        <button type="button" class="btn-play" data-bs-toggle="modal"
-                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
-                            <span></span>
-                        </button>
-                        <h5 class="ms-4 mb-0 d-none d-sm-block">Play Video</h5>
-                    </div>
-                </div>
-                <div class="col-lg-6 animated fadeIn">
-                    <div class="row g-3">
-                        <div class="col-6 text-end">
-                            <img class="img-fluid bg-white p-3 w-100 mb-3" src="img/hero-1.jpg" alt="">
-                            <img class="img-fluid bg-white p-3 w-50" src="img/hero-3.jpg" alt="">
-                        </div>
-                        <div class="col-6">
-                            <img class="img-fluid bg-white p-3 w-50 mb-3" src="img/hero-4.jpg" alt="">
-                            <img class="img-fluid bg-white p-3 w-100" src="img/hero-2.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="owl-carousel owl-theme hero-carousel">
+        <div class="item">
+            <img src="img/photo/1.jpg" alt="Banner 1" class="img-fluid w-100" />
+        </div>
+        <div class="item">
+            <img src="img/photo/m3.jpg" alt="Banner 2" class="img-fluid w-100" />
+        </div>
+        <div class="item">
+            <img src="img/photo/m2.jpg" alt="Banner 3" class="img-fluid w-100" />
+        </div>
+        <div class="item">
+            <img src="img/photo/m1.jpeg" alt="Banner 4" class="img-fluid w-100" />
         </div>
     </div>
+        
+    <style>
+        .hero-carousel .item img {
+            height: 90vh;
+            object-fit: cover;
+        }
+
+    </style>
     <!-- Header End -->
 
 
@@ -133,10 +131,10 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="row g-3 img-twice position-relative h-100">
                         <div class="col-6">
-                            <img class="img-fluid bg-light p-3" src="img/about-1.jpg" alt="">
+                            <img class="img-fluid bg-light p-3" src="img/photo/13.jpg" alt="">
                         </div>
                         <div class="col-6 align-self-end">
-                            <img class="img-fluid bg-light p-3" src="img/about-2.jpg" alt="">
+                            <img class="img-fluid bg-light p-3" src="img/photo/2.jpg" alt="">
                         </div>
                     </div>
                 </div>
@@ -166,6 +164,7 @@
             </div>
         </div>
     </div>
+
     <!-- About End -->
 
 
@@ -815,6 +814,20 @@
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $(".hero-carousel").owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
+            animateOut: 'fadeOut',
+            nav: false,
+            dots: true
+          });
+        });
+      </script>      
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
