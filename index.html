@@ -32,6 +32,28 @@
   </head>
   <body>
 
+	<nav class="glass-nav">
+		<div class="glass-nav-container">
+			<div class="glass-logo-wrapper">
+				<a href="index.html" class="glass-logo-link" >
+				  <span class="flaticon-camera-shutter"></span>
+				  <span class="glass-logo-text">Oyil <span class="glass-logo-sub">Photography</span></span>
+				</a>
+			</div>  
+		  <button class="glass-toggle" id="glassToggle">&#9776;</button>
+		  <ul class="glass-links" id="glassMenu">
+			<li><a href="#home">Home</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#services">Services</a></li>
+			<li><a href="#gallery">Gallery</a></li>
+			<li><a href="#testimony">Testimony</a></li>
+			<li><a href="#contact">Contact</a></li>
+		  </ul>
+		</div>
+	</nav>
+	  
+	  
+
 
   	<nav id="navbar" class="navbar">
 		<ul class="nav-menu">
@@ -71,11 +93,11 @@
 
 		<!-- Start Home Section -->
 	<section id="home" class="hero-wrap js-fullheight">
-		<div class="logo-top-left">
+		<!-- <div class="logo-top-left">
 			<h1 class="logo">
 				<a href="index.html"><span class="flaticon-camera-shutter"></span> Oyil <small>Photography</small></a>
 			</h1>
-		</div>
+		</div> -->
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
 				<!-- Slide 1 -->
@@ -152,97 +174,11 @@
 			<!-- <div class="swiper-pagination"></div> -->
 		</div>
 	</section>
-	<style>
-		.hero-wrap {
-			position: relative;
-			height: 100vh;
-			overflow: hidden;
-		}
-	
-		.swiper-container {
-			width: 100%;
-			height: 100%;
-		}
-	
-		.swiper-slide {
-			position: relative;
-			background-size: cover;
-			background-position: center;
-			height: 100vh;
-		}
-	
-		.overlay {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			/* background: rgba(0, 0, 0, 0.5); */
-		}
-	
-		.text {
-			color: white;
-		}
-		.logo-top-left {
-		position: absolute;
-		top: 30px;
-		left: 30px;
-		z-index: 9999;
-		background-color: rgba(0, 0, 0, 0.4); /* subtle black bg */
-		padding: 12px 18px;
-		border-radius: 10px;
-		box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-		backdrop-filter: blur(4px); /* adds that modern frosted-glass look */
-		}
 
-
-		.logo-top-left .logo {
-		font-size: 20px;
-		font-weight: 700;
-		margin: 0;
-		line-height: 1.2;
-		}
-
-		.logo-top-left .logo a {
-		color: #fff;
-		text-decoration: none;
-		display: flex;
-		align-items: center;
-		gap: 8px;
-		}
-
-		.logo-top-left .logo span.flaticon-camera-shutter {
-		font-size: 28px;
-		color: #fff;
-		}
-
-		.logo-top-left .logo small {
-		display: block;
-		font-size: 12px;
-		font-weight: 300;
-		margin-top: 2px;
-		color: #ddd;
-		}
-
-		.logo-top-left {
-		animation: fadeInLogo 1.2s ease-in-out;
-		}
-
-		@keyframes fadeInLogo {
-		from {
-			opacity: 0;
-			transform: translateY(-10px);
-		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
-	</style>
 		<!-- End Home Section -->
 
 		<!-- Start About Section -->
-		<!--<section class="ftco-about img ftco-section" id="about">
+		<section class="ftco-about img ftco-section" id="about">
 			<div class="col-md-4 heading-section text-center ftco-animate">
 				<h2 class="mb-4">About Us</h2>
 			</div>
@@ -285,127 +221,10 @@
 	        </div>
         </div>
     	</div>
-    	</section>-->
+    	</section>
 		<!-- End About Me Section -->
 
-		<!-- Start Services Section -->
-		<!-- <section id="services" class="ftco-section">
-		  <div class="container">
-		  	<div class="row">
-		  		<div class="col-md-9">
-		  			<div class="row">
-				  		<div class="col-md-5 heading-section ftco-animate pb-5">
-		            <h2 class="mb-4">Photography Services</h2>
-		            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
-		          </div>
-				  	</div>
-		  			<div class="row">
-		        	<div class="col-md-4">
-		        		<div class="media block-6 services d-block ftco-animate">
-		              <div class="icon"><span class="flaticon-video-camera"></span></div>
-		              <div class="media-body">
-		                <h3 class="heading mb-3">Movies &amp; Advertising Videos</h3>
-		                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences.</p>
-		              </div>
-		            </div> 
-		        	</div>
-		        	<div class="col-md-4">
-		        		<div class="media block-6 services d-block ftco-animate">
-		              <div class="icon"><span class="flaticon-video-player"></span></div>
-		              <div class="media-body">
-		                <h3 class="heading mb-3">Clip &amp; Music Videos</h3>
-		                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences.</p>
-		              </div>
-		            </div> 
-		        	</div>
-		        	<div class="col-md-4">
-		        		<div class="media block-6 services d-block ftco-animate">
-		              <div class="icon"><span class="flaticon-video-player-1"></span></div>
-		              <div class="media-body">
-		                <h3 class="heading mb-3">Short Film Productions</h3>
-		                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences.</p>
-		              </div>
-		            </div> 
-		        	</div>
-	        	</div>
-	        </div>
-	        <div class="col-md-3 d-flex align-items-stretch">
-	        	<div class="img w-100" style="background-image: url(images/about.jpg);"></div>
-	        </div>
-        </div>
-        <div class="row progress-circle pt-md-5">
-        	<div class="col-md-7 order-md-last py-md-5">
-        		<div class="row">
-				  		<div class="col-md-4 mb-md-0 mb-4 ftco-animate">
-					      <div class="">
-					        <h2 class="text-center mb-4">Creation</h2>
-
-					        <div class="progress mx-auto" data-value='90'>
-					          <span class="progress-left">
-		                  <span class="progress-bar border-primary"></span>
-					          </span>
-					          <span class="progress-right">
-		                  <span class="progress-bar border-primary"></span>
-					          </span>
-					          <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-					            <div class="h5">90<sup class="small">%</sup></div>
-					          </div>
-					        </div>
-					      </div>
-					    </div>
-
-					    <div class="col-md-4 mb-md-0 mb-4 ftco-animate">
-					      <div class="">
-					        <h2 class="text-center mb-4">Development</h2>
-
-					        <div class="progress mx-auto" data-value='80'>
-					          <span class="progress-left">
-		                  <span class="progress-bar border-primary"></span>
-					          </span>
-					          <span class="progress-right">
-		                  <span class="progress-bar border-primary"></span>
-					          </span>
-					          <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-					            <div class="h5">80<sup class="small">%</sup></div>
-					          </div>
-					        </div>
-					      </div>
-					    </div>
-
-					    <div class="col-md-4 mb-md-0 mb-4 ftco-animate">
-					      <div class="">
-					        <h2 class="text-center mb-4">Production</h2>
-
-					        <div class="progress mx-auto" data-value='75'>
-					          <span class="progress-left">
-		                  <span class="progress-bar border-primary"></span>
-					          </span>
-					          <span class="progress-right">
-		                  <span class="progress-bar border-primary"></span>
-					          </span>
-					          <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-					            <div class="h5">75<sup class="small">%</sup></div>
-					          </div>
-					        </div>
-					      </div>
-					    </div>
-
-					    <div class="p-md-4 mt-4">
-					    	<div class="col-md-8 ftco-animate">
-						    	<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast.</p>
-					    	</div>
-					    </div>
-					  </div>
-					</div>
-					<div class="col-md-5 d-flex align-items-stretch">
-	        	<div class="img w-100" style="background-image: url(images/about-2.jpg);"></div>
-	        </div>
-		  	</div>
-		  </div>
-		</section> -->
-		<!-- End Services Section -->
-
-		<!-- Start Testimonials Section -->
+		<!-- Start Gallery Section -->
 		<section id="work" class="ftco-section">
 			<div class="container">
 			  <div class="row justify-content-center">
@@ -583,6 +402,124 @@
 			}
 
 		</style>
+
+		<!-- Start Services Section -->
+		<section id="services" class="ftco-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-9">
+						<div class="row">
+							<div class="col-md-5 heading-section ftco-animate pb-5">
+						<h2 class="mb-4">Photography Services</h2>
+						<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
+					</div>
+						</div>
+						<div class="row">
+						<div class="col-md-4">
+							<div class="media block-6 services d-block ftco-animate">
+						<div class="icon"><span class="flaticon-video-camera"></span></div>
+						<div class="media-body">
+							<h3 class="heading mb-3">Movies &amp; Advertising Videos</h3>
+							<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences.</p>
+						</div>
+						</div> 
+						</div>
+						<div class="col-md-4">
+							<div class="media block-6 services d-block ftco-animate">
+						<div class="icon"><span class="flaticon-video-player"></span></div>
+						<div class="media-body">
+							<h3 class="heading mb-3">Clip &amp; Music Videos</h3>
+							<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences.</p>
+						</div>
+						</div> 
+						</div>
+						<div class="col-md-4">
+							<div class="media block-6 services d-block ftco-animate">
+						<div class="icon"><span class="flaticon-video-player-1"></span></div>
+						<div class="media-body">
+							<h3 class="heading mb-3">Short Film Productions</h3>
+							<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences.</p>
+						</div>
+						</div> 
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 d-flex align-items-stretch">
+					<div class="img w-100" style="background-image: url(images/about.jpg);"></div>
+				</div>
+			</div>
+			<div class="row progress-circle pt-md-5">
+				<div class="col-md-7 order-md-last py-md-5">
+					<div class="row">
+							<div class="col-md-4 mb-md-0 mb-4 ftco-animate">
+							<div class="">
+								<h2 class="text-center mb-4">Creation</h2>
+	
+								<div class="progress mx-auto" data-value='90'>
+								<span class="progress-left">
+							<span class="progress-bar border-primary"></span>
+								</span>
+								<span class="progress-right">
+							<span class="progress-bar border-primary"></span>
+								</span>
+								<div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+									<div class="h5">90<sup class="small">%</sup></div>
+								</div>
+								</div>
+							</div>
+							</div>
+	
+							<div class="col-md-4 mb-md-0 mb-4 ftco-animate">
+							<div class="">
+								<h2 class="text-center mb-4">Development</h2>
+	
+								<div class="progress mx-auto" data-value='80'>
+								<span class="progress-left">
+							<span class="progress-bar border-primary"></span>
+								</span>
+								<span class="progress-right">
+							<span class="progress-bar border-primary"></span>
+								</span>
+								<div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+									<div class="h5">80<sup class="small">%</sup></div>
+								</div>
+								</div>
+							</div>
+							</div>
+	
+							<div class="col-md-4 mb-md-0 mb-4 ftco-animate">
+							<div class="">
+								<h2 class="text-center mb-4">Production</h2>
+	
+								<div class="progress mx-auto" data-value='75'>
+								<span class="progress-left">
+							<span class="progress-bar border-primary"></span>
+								</span>
+								<span class="progress-right">
+							<span class="progress-bar border-primary"></span>
+								</span>
+								<div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+									<div class="h5">75<sup class="small">%</sup></div>
+								</div>
+								</div>
+							</div>
+							</div>
+	
+							<div class="p-md-4 mt-4">
+								<div class="col-md-8 ftco-animate">
+									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast.</p>
+								</div>
+							</div>
+						</div>
+						</div>
+						<div class="col-md-5 d-flex align-items-stretch">
+					<div class="img w-100" style="background-image: url(images/about-2.jpg);"></div>
+				</div>
+				</div>
+			</div>
+		</section>
+			<!-- End Services Section -->
+		  
 
 		<section class="ftco-section testimony-section" id="testimonial">
 			<div class="container">
@@ -982,8 +919,15 @@
 			});
 		}
 
-		// Optional: Show all on page load
 		window.onload = () => filterGallery('all');
 	</script>
+  
+	<script>
+		document.getElementById("glassToggle").addEventListener("click", function () {
+		document.getElementById("glassMenu").classList.toggle("show");
+		});
+
+	</script>
+  
   </body>
 </html>
