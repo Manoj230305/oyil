@@ -178,6 +178,38 @@
 
 		<!-- End Home Section -->
 
+		<a
+			href="https://wa.me/1234567890"
+			class="whatsapp-float"
+			target="_blank"
+			title="Chat with us on WhatsApp"
+			>
+			<img src="images/WP.png" alt="WhatsApp" />
+		</a>
+
+		<style>
+			.whatsapp-float {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			z-index: 1000;
+			cursor: pointer;
+			}
+
+			.whatsapp-float img {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			transition: transform 0.3s ease;
+			}
+
+			.whatsapp-float img:hover {
+			transform: scale(1.1);
+			}
+
+		</style>
+
 		<!-- Start About Section -->
 		<section class="ftco-about img ftco-section" id="about">
 			<div class="col-md-4 heading-section text-center ftco-animate">
