@@ -9908,6 +9908,7 @@ textarea.form-control {
   padding: 8px 20px;
   border-radius: 50px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-right: 240px; /* Pushes the logo to the far left */
 }
 
 /* Nav Links */
