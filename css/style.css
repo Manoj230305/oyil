@@ -44,7 +44,7 @@ html {
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block; }
@@ -10098,4 +10098,54 @@ to {
 .btn-outline-light:hover {
   background-color: var(--gray);
   color: #ffffff;
+}
+
+.has-submenu {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 25px; /* Adjust as needed */
+  /* left: 40%; Shows to the right of Stories */
+  background: black;
+  padding: 10px 0;
+  min-width: 150px;
+  border-radius: 8px;
+}
+
+.submenu li {
+  list-style: none;
+}
+
+.submenu li a {
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.submenu li a:hover {
+  background: #333;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .submenu {
+    position: static; /* No absolute positioning */
+    width: 100%; /* Full width dropdown */
+    border-radius: 8px; /* Optional: keep it clean */
+    box-shadow: none; /* No floating effect */
+    background: #111; /* Slightly different black if you want */
+  }
+  .submenu a {
+    padding: 10px 20px;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+  }
 }

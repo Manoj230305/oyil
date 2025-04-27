@@ -47,7 +47,18 @@
 			<li><a href="#about">About</a></li>
 			<li><a href="#services">Services</a></li>
 			<li><a href="#gallery">Gallery</a></li>
-			<li><a href="#testimony">Testimony</a></li>
+			<li><a href="#testimony">Testimony</a></li>	
+			<li class="has-submenu">
+				<a href="#">Stories</a>
+				<ul class="submenu">
+				  <li><a href="#">Story 1</a></li>
+				  <li><a href="#">Story 2</a></li>
+				  <li><a href="#">Story 3</a></li>
+				  <li><a href="#">Story 4</a></li>
+				  <li><a href="#">Story 5</a></li>
+				  <li><a href="#">Story 6</a></li>
+				</ul>
+			</li>
 			<li><a href="#contact">Contact</a></li>
 		  </ul>
 		</div>
@@ -453,6 +464,11 @@
 			border-radius: 10px;
 			display: inline-block;
 			}
+			.btn-grad.btn-small {
+			padding: 6px 12px;
+			font-size: 0.8rem;
+			border-radius: 8px;
+			}
 
 			.btn-grad:hover {
 			background-position: right center;
@@ -508,7 +524,7 @@
 					<div class="img w-100" style="background-image: url(images/nnp.png);"></div>
 				</div>
 			</div>
-			<div class="row progress-circle pt-md-5">
+			<!-- <div class="row progress-circle pt-md-5">
 				<div class="col-md-7 order-md-last py-md-5">
 					<div class="row">
 							<div class="col-md-4 mb-md-0 mb-4 ftco-animate">
@@ -565,18 +581,18 @@
 							</div>
 							</div>
 	
-							<!-- <div class="p-md-4 mt-4">
+							<div class="p-md-4 mt-4">
 								<div class="col-md-8 ftco-animate">
 									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast.</p>
 								</div>
-							</div> -->
+							</div>
 						</div>
 						</div>
 						<div class="col-md-5 d-flex align-items-stretch">
 					<div class="img w-100" style="background-image: url(images/abp.png);"></div>
 				</div>
 				</div>
-			</div>
+			</div> -->
 		</section>
 		<!-- End Services Section -->
 		  
@@ -593,22 +609,30 @@
         <div class="row ftco-animate">
           <div class="col-md-12">
             <div class="carousel-testimony owl-carousel">
-              <div class="item">
-                <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-4" style="background-image: url(images/n3.jpg)">
-                    <span class="quote d-flex align-items-center justify-content-center">
-                      <i class="icon-quote-left"></i>
-                    </span>
-                  </div>
-                  <div class="text">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <div class="pl-5">
-	                    <p class="name">Garreth Smith</p>
-	                    <span class="position">CEO Founder of Commercial Building</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+				<div class="item">
+					<div class="testimony-wrap p-4 pb-5">
+					  <div class="user-img mb-4" style="background-image: url(images/n3.jpg)">
+						<span class="quote d-flex align-items-center justify-content-center">
+						  <i class="icon-quote-left"></i>
+						</span>
+					  </div>
+					  <div class="text">
+						<p class="mb-5 pl-4 line">
+						  Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+						</p>
+						<div class="pl-5 d-flex justify-content-between align-items-center mt-4">
+							<div>
+							  <p class="name mb-0">Garreth Smith</p>
+							  <span class="position">CEO</span>
+							</div>
+							<a href="story.html" class="btn-grad btn-small" style="color: rgb(13, 10, 28);">Read More</a>
+						</div>
+						  
+					  </div>
+					</div>
+				</div>
+				
+				  
               <div class="item">
                 <div class="testimony-wrap p-4 pb-5">
                   <div class="user-img mb-4" style="background-image: url(images/n2.jpg)">
@@ -618,10 +642,13 @@
                   </div>
                   <div class="text">
                     <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <div class="pl-5">
-	                    <p class="name">Garreth Smith</p>
-	                    <span class="position">CEO Founder of Interior Design</span>
-	                  </div>
+                    <div class="pl-5 d-flex justify-content-between align-items-center mt-4">
+						<div>
+						  <p class="name mb-0">Garreth Smith</p>
+						  <span class="position">CEO</span>
+						</div>
+						<a href="story.html" class="btn-grad btn-small" style="color: rgb(13, 10, 28)">Read More</a>
+					</div>
                   </div>
                 </div>
               </div>
@@ -634,10 +661,13 @@
                   </div>
                   <div class="text">
                     <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <div class="pl-5">
-	                    <p class="name">Garreth Smith</p>
-	                    <span class="position">Exterior Designer</span>
-	                  </div>
+                    <div class="pl-5 d-flex justify-content-between align-items-center mt-4">
+						<div>
+						  <p class="name mb-0">Garreth Smith</p>
+						  <span class="position">CEO</span>
+						</div>
+						<a href="story.html" class="btn-grad btn-small" style="color: rgb(13, 10, 28)">Read More</a>
+					</div>
                   </div>
                 </div>
               </div>
@@ -650,10 +680,13 @@
                   </div>
                   <div class="text">
                     <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <div class="pl-5">
-	                    <p class="name">Garreth Smith</p>
-	                    <span class="position">Landscape Designer</span>
-	                  </div>
+                    <div class="pl-5 d-flex justify-content-between align-items-center mt-4">
+						<div>
+						  <p class="name mb-0">Garreth Smith</p>
+						  <span class="position">CEO</span>
+						</div>
+						<a href="story.html" class="btn-grad btn-small" style="color: rgb(13, 10, 28)">Read More</a>
+					</div>
                   </div>
                 </div>
               </div>
@@ -666,10 +699,13 @@
                   </div>
                   <div class="text">
                     <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <div class="pl-5">
-	                    <p class="name">Garreth Smith</p>
-	                    <span class="position">System Analyst</span>
-	                  </div>
+                    <div class="pl-5 d-flex justify-content-between align-items-center mt-4">
+						<div>
+						  <p class="name mb-0">Garreth Smith</p>
+						  <span class="position">CEO</span>
+						</div>
+						<a href="story.html" class="btn-grad btn-small" style="color: rgb(13, 10, 28)">Read More</a>
+					</div>
                   </div>
                 </div>
               </div>
@@ -707,6 +743,15 @@
 		  </div>
 		  
 		<div id="music-container"></div>
+
+		<style>
+			@media (max-width: 768px) {
+			  #drag-container {
+				display: none;
+			  }
+			}
+		</style>
+		  
 		  
 
 
@@ -773,23 +818,23 @@
 				<div class="row block-9">
 					<!-- Contact Form Column -->
 					<div class="col-md-6 ftco-animate">
-					<form action="#" class="contact-form p-4 p-md-5 py-md-5">
-						<div class="form-group">
-						<input type="text" class="form-control" placeholder="Your Name">
-						</div>
-						<div class="form-group">
-						<input type="text" class="form-control" placeholder="Your Email">
-						</div>
-						<div class="form-group">
-						<input type="text" class="form-control" placeholder="Subject">
-						</div>
-						<div class="form-group">
-						<textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-						</div>
-						<div class="form-group">
-						<input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
-						</div>
-					</form>
+						<form action="#" class="contact-form p-4 p-md-5 py-md-5">
+							<div class="form-group">
+							<input type="text" class="form-control" placeholder="Your Name">
+							</div>
+							<div class="form-group">
+							<input type="text" class="form-control" placeholder="Your Email">
+							</div>
+							<div class="form-group">
+							<input type="text" class="form-control" placeholder="Subject">
+							</div>
+							<div class="form-group">
+							<textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+							</div>
+							<div class="form-group">
+							<input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+							</div>
+						</form>
 					</div>
 				
 					<!-- Map Column -->
@@ -1016,28 +1061,21 @@
 		document.getElementById("glassToggle").addEventListener("click", function () {
 		document.getElementById("glassMenu").classList.toggle("show");
 		});
-
 	</script>
 
 	  
 	<script>
-		var radius = 240; // how big of the radius
+		var radius = 320; // how big of the radius
 		var autoRotate = true; // auto rotate or not
 		var rotateSpeed = -60; // unit: seconds/360 degrees
-		var imgWidth = 120; // width of images (unit: px)
-		var imgHeight = 170; // height of images (unit: px)
+		var imgWidth = 220; // width of images (unit: px)
+		var imgHeight = 320; // height of images (unit: px)
 
 		// Link of background music - set 'null' if you dont want to play background music
 		var bgMusicURL = 'https://api.soundcloud.com/tracks/143041228/stream?client_id=587aa2d384f7333a886010d5f52f302a';
 		var bgMusicControls = true; // Show UI music control
 
-		/*
-			NOTE:
-			+ imgWidth, imgHeight will work for video
-			+ if imgWidth, imgHeight too small, play/pause button in <video> will be hidden
-			+ Music link are taken from: https://hoangtran0410.github.io/Visualyze-design-your-own-/?theme=HauMaster&playlist=1&song=1&background=28
-			+ Custom from code in tiktok video  https://www.facebook.com/J2TEAM.ManhTuan/videos/1353367338135935/
-		*/
+
 
 
 		// ===================== start =======================
@@ -1093,43 +1131,45 @@
 
 
 		// setup events
-		document.onpointerdown = function (e) {
-		clearInterval(odrag.timer);
-		e = e || window.event;
-		var sX = e.clientX,
-			sY = e.clientY;
+		var odrag = document.getElementById('drag-container'); // instead of applying on document!
 
-		this.onpointermove = function (e) {
+		odrag.onpointerdown = function (e) {
+			clearInterval(odrag.timer);
 			e = e || window.event;
-			var nX = e.clientX,
-				nY = e.clientY;
-			desX = nX - sX;
-			desY = nY - sY;
-			tX += desX * 0.1;
-			tY += desY * 0.1;
-			applyTranform(odrag);
-			sX = nX;
-			sY = nY;
+			var sX = e.clientX,
+				sY = e.clientY;
+
+			document.onpointermove = function (e) {
+				e = e || window.event;
+				var nX = e.clientX,
+					nY = e.clientY;
+				desX = nX - sX;
+				desY = nY - sY;
+				tX += desX * 0.1;
+				tY += desY * 0.1;
+				applyTranform(odrag);
+				sX = nX;
+				sY = nY;
+			};
+
+			document.onpointerup = function (e) {
+				odrag.timer = setInterval(function () {
+					desX *= 0.95;
+					desY *= 0.95;
+					tX += desX * 0.1;
+					tY += desY * 0.1;
+					applyTranform(odrag);
+					playSpin(false);
+					if (Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5) {
+						clearInterval(odrag.timer);
+						playSpin(true);
+					}
+				}, 17);
+				document.onpointermove = document.onpointerup = null;
+			};
+
 		};
 
-		this.onpointerup = function (e) {
-			odrag.timer = setInterval(function () {
-			desX *= 0.95;
-			desY *= 0.95;
-			tX += desX * 0.1;
-			tY += desY * 0.1;
-			applyTranform(odrag);
-			playSpin(false);
-			if (Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5) {
-				clearInterval(odrag.timer);
-				playSpin(true);
-			}
-			}, 17);
-			this.onpointermove = this.onpointerup = null;
-		};
-
-		return false;
-		};
 
 		document.onmousewheel = function(e) {
 		e = e || window.event;
