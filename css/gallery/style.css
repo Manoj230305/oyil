@@ -411,7 +411,34 @@ ol {
 /*---------------------
    Hero section
  -----------------------*/
-
+ .slick-prev,
+ .slick-next {
+	 position: absolute;
+	 top: 50%;
+	 transform: translateY(-50%);
+	 z-index: 100;
+	 background: rgba(0, 0, 0, 0.5);
+	 color: white;
+	 border: none;
+	 padding: 10px 15px;
+	 cursor: pointer;
+	 border-radius: 50%;
+	 font-size: 18px;
+ }
+ 
+ .slick-prev {
+	 left: 15px;
+ }
+ 
+ .slick-next {
+	 right: 15px;
+ }
+ 
+ .slick-prev:hover,
+ .slick-next:hover {
+	 background: rgba(0, 0, 0, 0.8);
+ }
+ 
 .hero__section {
 	padding-top: 120px;
 	margin-bottom: 90px;

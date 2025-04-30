@@ -67,11 +67,13 @@ $(window).on('load', function() {
 		centerMode: true,
 		variableWidth: true,
 		centerMode: true,
-		arrows: false,
+		arrows: true,
 		asNavFor: '.hero-text-slider',
 		autoplay: true,
 		pauseOnHover:false,
 		autoplaySpeed: 3000,
+		prevArrow: '<button class="slick-prev">&#10094;</button>', 
+	nextArrow: '<button class="slick-next">&#10095;</button>', 
 		responsive: [
 			{
 				breakpoint: 480,
@@ -85,14 +87,7 @@ $(window).on('load', function() {
 	
 	var hero_slider = $('.hero-slider');
 
-	hero_slider.on('wheel', (function(e) {
-		e.preventDefault();
-		if (e.originalEvent.deltaY < 0) {
-			$(this).slick('slickPrev');
-		} else {
-			$(this).slick('slickNext');
-		}
-	}));
+
 
 	hero_slider.on('click', '.slick-slide', function (e) {
 		e.preventDefault();
