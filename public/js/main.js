@@ -1,213 +1,236 @@
+ AOS.init({
+ 	duration: 800,
+ 	easing: 'slide'
+ });
 
-//ScrollIt JS File
+$(document).ready(function($) {
 
-(function($) {
-    'use strict';
+	"use strict";
 
-    var pluginName = 'ScrollIt',
-        pluginVersion = '1.0.3';
+	$(window).stellar({
+    responsive: true,
+    parallaxBackgrounds: true,
+    parallaxElements: true,
+    horizontalScrolling: false,
+    hideDistantElements: false,
+    scrollProperty: 'scroll',
+    horizontalOffset: 0,
+	  verticalOffset: 0
+  });
 
-    /*
-     * OPTIONS
-     */
-    var defaults = {
-        upKey: 38,
-        downKey: 40,
-        easing: 'linear',
-        scrollTime: 600,
-        activeClass: 'active',
-        onPageChange: null,
-        topOffset : 0
-    };
+	// Scrollax
+  $.Scrollax();
 
-    $.scrollIt = function(options) {
 
-        /*
-         * DECLARATIONS
-         */
-        var settings = $.extend(defaults, options),
-            active = 0,
-            lastIndex = $('[data-scroll-index]:last').attr('data-scroll-index');
+	// loader
+	var loader = function() {
+		setTimeout(function() { 
+			if($('#ftco-loader').length > 0) {
+				$('#ftco-loader').removeClass('show');
+			}
+		}, 1);
+	};
+	loader();
+	var carousel = function() {
+		$('.carousel-testimony').owlCarousel({
+			center: true,
+			loop: true,
+			items:1,
+			margin: 30,
+			stagePadding: 0,
+			nav: false,
+			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
+			responsive:{
+				0:{
+					items: 1
+				},
+				600:{
+					items: 3
+				},
+				1000:{
+					items: 3
+				}
+			}
+		});
+	};
+	carousel();
 
-        /*
-         * METHODS
-         */
+	var fullHeight = function() {
 
-        /**
-         * navigate
-         *
-         * sets up navigation animation
-         */
-        var navigate = function(ndx) {
-            if(ndx < 0 || ndx > lastIndex) return;
+		$('.js-fullheight').css('height', $(window).height());
+		$(window).resize(function(){
+			$('.js-fullheight').css('height', $(window).height());
+		});
 
-            var targetTop = $('[data-scroll-index=' + ndx + ']').offset().top + settings.topOffset + 1;
-            $('html,body').animate({
-                scrollTop: targetTop,
-                easing: settings.easing
-            }, settings.scrollTime);
-        };
+	};
+	fullHeight();
+	
+	var counter = function() {
+		
+		$('#section-counter, .ftco-about').waypoint( function( direction ) {
 
-        /**
-         * doScroll
-         *
-         * runs navigation() when criteria are met
-         */
-        var doScroll = function (e) {
-            var target = $(e.target).closest("[data-scroll-nav]").attr('data-scroll-nav') ||
-            $(e.target).closest("[data-scroll-goto]").attr('data-scroll-goto');
-            navigate(parseInt(target));
-        };
+			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
 
-        /**
-         * keyNavigation
-         *
-         * sets up keyboard navigation behavior
-         */
-        var keyNavigation = function (e) {
-            var key = e.which;
-            if($('html,body').is(':animated') && (key == settings.upKey || key == settings.downKey)) {
-                return false;
-            }
-            if(key == settings.upKey && active > 0) {
-                navigate(parseInt(active) - 1);
-                return false;
-            } else if(key == settings.downKey && active < lastIndex) {
-                navigate(parseInt(active) + 1);
-                return false;
-            }
-            return true;
-        };
+				var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
+				$('.number').each(function(){
+					var $this = $(this),
+						num = $this.data('number');
+						console.log(num);
+					$this.animateNumber(
+					  {
+					    number: num,
+					    numberStep: comma_separator_number_step
+					  }, 7000
+					);
+				});
+				
+			}
 
-        /**
-         * updateActive
-         *
-         * sets the currently active item
-         */
-        var updateActive = function(ndx) {
-            if(settings.onPageChange && ndx && (active != ndx)) settings.onPageChange(ndx);
+		} , { offset: '95%' } );
 
-            active = ndx;
-            $('[data-scroll-nav]').removeClass(settings.activeClass);
-            $('[data-scroll-nav=' + ndx + ']').addClass(settings.activeClass);
-        };
+	}
+	counter();
 
-        /**
-         * watchActive
-         *
-         * watches currently active item and updates accordingly
-         */
-        var watchActive = function() {
-            var winTop = $(window).scrollTop();
+	var contentWayPoint = function() {
+		var i = 0;
+		$('.ftco-animate').waypoint( function( direction ) {
 
-            var visible = $('[data-scroll-index]').filter(function(ndx, div) {
-                return winTop >= $(div).offset().top + settings.topOffset &&
-                winTop < $(div).offset().top + (settings.topOffset) + $(div).outerHeight()
-            });
-            var newActive = visible.first().attr('data-scroll-index');
-            updateActive(newActive);
-        };
+			if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
+				
+				i++;
 
-        /*
-         * runs methods
-         */
-        $(window).on('scroll',watchActive).scroll();
+				$(this.element).addClass('item-animate');
+				setTimeout(function(){
 
-        $(window).on('keydown', keyNavigation);
+					$('body .ftco-animate.item-animate').each(function(k){
+						var el = $(this);
+						setTimeout( function () {
+							var effect = el.data('animate-effect');
+							if ( effect === 'fadeIn') {
+								el.addClass('fadeIn ftco-animated');
+							} else if ( effect === 'fadeInLeft') {
+								el.addClass('fadeInLeft ftco-animated');
+							} else if ( effect === 'fadeInRight') {
+								el.addClass('fadeInRight ftco-animated');
+							} else {
+								el.addClass('fadeInUp ftco-animated');
+							}
+							el.removeClass('item-animate');
+						},  k * 50, 'easeInOutExpo' );
+					});
+					
+				}, 100);
+				
+			}
 
-        $('body').on('click','[data-scroll-nav], [data-scroll-goto]', function(e){
-            e.preventDefault();
-            doScroll(e);
-        });
+		} , { offset: '95%' } );
+	};
+	contentWayPoint();
 
-    };
-}(jQuery));
 
-// Javascript main.js functions
 
-$(document).ready(function() {
-    $(window).on("scroll", function() {
-        if($(this).scrollTop() > 90) {
-            $(".navbar").addClass("navbar-shrink");
-        } else {
-            $(".navbar").removeClass("navbar-shrink");
-        }
+	// magnific popup
+	$('.image-popup').magnificPopup({
+    type: 'image',
+    closeOnContentClick: true,
+    closeBtnInside: false,
+    fixedContentPos: true,
+    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+     gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    },
+    image: {
+      verticalFit: true
+    },
+    zoom: {
+      enabled: true,
+      duration: 300 // don't foget to change the duration also in CSS
+    }
+  });
+
+  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+    disableOn: 700,
+    type: 'iframe',
+    mainClass: 'mfp-fade',
+    removalDelay: 160,
+    preloader: false,
+
+    fixedContentPos: false
+  });
+
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+	e.preventDefault();
+	document.querySelector(this.getAttribute('href')).scrollIntoView({
+	  behavior: 'smooth'
+	});
+  });
+});
+
+$(function() {
+  
+  var link = $('#navbar a.dot');
+  
+  // Move to specific section when click on menu link
+  link.on('click', function(e) {
+    var target = $($(this).attr('href'));
+    $('html, body').animate({
+      scrollTop: target.offset().top
+    }, 600);
+    $(this).addClass('active');
+    e.preventDefault();
+  });
+  
+  // Run the scrNav when scroll
+  $(window).on('scroll', function(){
+    scrNav();
+  });
+  
+  // scrNav function 
+  // Change active dot according to the active section in the window
+  function scrNav() {
+    var sTop = $(window).scrollTop();
+    $('section').each(function() {
+      var id = $(this).attr('id'),
+          offset = $(this).offset().top-1,
+          height = $(this).height();
+      if(sTop >= offset && sTop < offset + height) {
+        link.removeClass('active');
+        $('#navbar').find('[data-scroll="' + id + '"]').addClass('active');
+      }
     });
+  }
+  scrNav();
+});
 
-    function parallaxMouse() {
-        if($("#parallax").length) {
-            var scene = document.getElementById("parallax");
-            var parallax = new Parallax(scene);
-        }
+
+$(function() {
+
+  $(".progress").each(function() {
+
+    var value = $(this).attr('data-value');
+    var left = $(this).find('.progress-left .progress-bar');
+    var right = $(this).find('.progress-right .progress-bar');
+
+    if (value > 0) {
+      if (value <= 50) {
+        right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)')
+      } else {
+        right.css('transform', 'rotate(180deg)')
+        left.css('transform', 'rotate(' + percentageToDegrees(value - 50) + 'deg)')
+      }
     }
 
-    parallaxMouse();
+  })
 
-    //skills meter
+  function percentageToDegrees(percentage) {
 
-    $(window).scroll(function(){
-        var hT = $("#skill-bar-wrapper").offset().top;
-        var hH = $("#skill-bar-wrapper").outerHeight();
-        var wH = $(window).height();
-        var wS = $(this).scrollTop();
+    return percentage / 100 * 360
 
-        if( wS > (hT + hH - 1.4 * wH)){
-            jQuery('.skillbar-container').each(function(){
-                jQuery(this).find('.skills').animate({
-                    width:jQuery(this).attr('data-percent')
-                }, 5000)
-            })
-        }
-    })
-
-    //filter
-    ///enabling active button
-    let $btns = $('.img-gallery .sortBtn .filter-btn');
-    $btns.click(function(e) {
-        $('.img-gallery .sortBtn .filter-btn').removeClass('active');
-        e.target.classList.add('active');
-
-    ///enabling filter selection according to the active button
-        let selector = $(e.target).attr('data-filter');
-        $('.img-gallery .grid').isotope({
-            filter:selector
-        })
-        return false;
-    })
-
-    ///enabling gallery mode with magnific popup.js and maginif popup.css
-    $('.image-popup').magnificPopup({
-        type:'image',
-        gallery: { enabled: true }
-    })
-
-    // owl carousel
-    $('.testimonial-slider').owlCarousel({
-        loop:true,
-        margin:0,
-        autoplay:true,
-        responsiveClass:true,
-        responsive:{
-            0:{
-                items:1,
-            },
-            600:{
-                items:2,
-            },
-            1000:{
-                items:3,
-            }
-        }
-    })
-
-    //scrollit
-    $.scrollIt({
-        topOffset:-50
-    })
-
-    //Hiding Mobile Navbar when a nav link is clicked
-    $(".nav-link").on("click", function() {
-        $(".navbar-collapse").collapse("hide");
-    })
+  }
 
 });

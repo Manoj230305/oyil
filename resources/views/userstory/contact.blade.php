@@ -12,17 +12,18 @@
             <div class="row">
                 <div class="col-lg-6 col-md-7">
                     <div class="contact-form">
-                        <form action="">
+                        <form action="{{ route('user.store') }}" method="POST">
+                            @csrf
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <input type="text" placeholder="Your Name" class="form-control">
+                                        <input type="text" name="name" placeholder="Your Name" class="form-control">
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <input type="email" placeholder="Your Email" class="form-control">
+                                        <input type="email" name="email" placeholder="Your Email" class="form-control">
                                     </div>
                                 </div>
                                 
@@ -31,7 +32,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input type="text" placeholder="Your Phone" class="form-control">
+                                        <input type="number" name="phone-number" placeholder="Your Phone" class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -39,15 +40,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <input type="text" placeholder="Subject" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <textarea name="" id="" placeholder="Your Message" class="form-control"></textarea>
+                                        <textarea name="message" id="" placeholder="Your Message" class="form-control"></textarea>
                                     </div>
                                 </div>
                             </div>
