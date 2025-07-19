@@ -1,7 +1,7 @@
 @include('userstory.headers.top') 
 @include('userstory.headers.header') 
 
-@include('userstory.userdata.content')
+@include('userstory.userdata.content'.$user_id)
 
 <!-- Parallax -->
  
@@ -22,7 +22,7 @@
     </div>
 </section>
 
-@include('userstory.gallery')
+@include('userstory.usr_images.gallery'.$user_id)
 @include('userstory.contact')
 @include('userstory.footers.footer')
 @include('userstory.footers.dependency')
