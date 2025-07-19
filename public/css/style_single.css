@@ -400,7 +400,7 @@ a, a:hover { text-decoration: none; }
                         .single-work .work-overlay .work-content ul li a {
                             width: 50px;
                             height: 50px;
-                            display: block;
+                            display: grid;
                             line-height: 50px;
                             font-size: 25px;
                             color: var(--white);
@@ -408,6 +408,13 @@ a, a:hover { text-decoration: none; }
                             border: 1px solid var(--white);
                             text-align: center;
                             transition: all .5s ease-out 0s;
+                            align-items: center;
+                        }
+                        
+                        @media screen and (min-width: 768px) {
+                            .mfp-image-holder .mfp-content{
+                                max-width: 60% !important;
+                            }   
                         }
 
                             .single-work .work-overlay .work-content ul li a:hover { background-color: var(--white); color: var(--main-color); }
