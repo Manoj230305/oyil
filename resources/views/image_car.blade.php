@@ -2,12 +2,12 @@
 		<div id="drag-container">
 			<div id="spin-container">
 			  <!-- Add your images (or video) here -->
-			  <img src="https://images.pexels.com/photos/206395/pexels-photo-206395.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-			  <img src="https://images.pexels.com/photos/1391498/pexels-photo-1391498.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-			  <img src="https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-			  <img src="https://images.pexels.com/photos/1758144/pexels-photo-1758144.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-			  <img src="https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
-			  <img src="https://images.pexels.com/photos/1462636/pexels-photo-1462636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+			  <img src="{{ asset('images/rotational/IMG_0452.jpg') }}" alt="">
+			  <img src="{{ asset('images/rotational/S_ST5419.jpg') }}" alt="">
+			  <img src="{{ asset('images/rotational/IMG_1158.jpg') }}" alt="">
+			  <img src="{{ asset('images/rotational/IMG_2466.jpg') }}" alt="">
+			  <img src="{{ asset('images/rotational/IMG_9595.jpg') }}" alt="">
+			  <img src="{{ asset('images/rotational/S_ST0052.jpg') }}" alt="">
 			  
 			  <!-- Example image with link -->
 			  <!-- <a target="_blank" href="https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg">
@@ -20,7 +20,7 @@
 			  </video> -->
 		  
 			  <!-- Text at center of ground -->
-			  <p>OYIL PHOTOGRAPHY	</p>
+			  <p>OYIL PHOTOGRAPHY</p>
 			</div>
 			<div id="ground"></div>
 		  </div>
