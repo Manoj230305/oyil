@@ -97,3 +97,9 @@
               transform: rotateY(0deg);
     }
   }
+
+  @media (max-width: 768px) {
+    #drag-container {
+      display: none;
+    }
+	}
