@@ -32,8 +32,8 @@ Route::get('/', function () {
     return view('index');
 })->name('user.home');
 
-Route::get('/story', function () {
-    return view('userstory.index');
+Route::get('/story/{id}', function ($id) {
+    return view('userstory.index', ['user_id' => $id]);
 });
 
 
