@@ -8,6 +8,7 @@
 			  <img src="{{ asset('images/rotational/IMG_2466.jpg') }}" alt="">
 			  <img src="{{ asset('images/rotational/IMG_9595.jpg') }}" alt="">
 			  <img src="{{ asset('images/rotational/S_ST0052.jpg') }}" alt="">
+			  <!-- <img src="{{ asset('images/rotational/18042023_01.jpg') }}" alt=""> -->
 			  
 			  <!-- Example image with link -->
 			  <!-- <a target="_blank" href="https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg">
