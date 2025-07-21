@@ -40,7 +40,7 @@
 						</div>
 						<div>
 							<h3 class="mb-4">Email Address</h3>
-							<p><a href="mailto:info@yoursite.com">oyilphotogrphy</a></p>
+							<p><a href="mailto:info@oyilphotography.com">info@oyilphotogrphy.com</a></p>
 						</div>
 					</div>
 				</div>
@@ -51,7 +51,7 @@
 						</div>
 						<div>
 							<h3 class="mb-4">Website</h3>
-							<p><a href="#">yoursite.com</a></p>
+							<p><a href="https://oyilphotography.com">oyilphotography.com</a></p>
 						</div>
 					</div>
 				</div>
