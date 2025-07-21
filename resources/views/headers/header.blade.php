@@ -16,12 +16,12 @@
 			<li class="has-submenu">
 				<a href="#">Stories</a>
 				<ul class="submenu">
-				  <li><a href="/story">Story 1</a></li>
-				  <li><a href="/story">Story 2</a></li>
-				  <li><a href="/story">Story 3</a></li>
-				  <li><a href="/story">Story 4</a></li>
-				  <li><a href="/story">Story 5</a></li>
-				  <li><a href="/story">Story 6</a></li>
+				  <li><a href="/story/1">Story 1</a></li>
+				  <li><a href="/story/2">Story 2</a></li>
+				  <li><a href="/story/3">Story 3</a></li>
+				  <li><a href="/story/4">Story 4</a></li>
+				  <li><a href="/story/5">Story 5</a></li>
+				  <li><a href="/story/6">Story 6</a></li>
 				</ul>
 			</li>
 			<li><a href="#contact">Contact</a></li>
