@@ -2,7 +2,7 @@
     @include('userstory.headers.top') 
     @include('userstory.headers.header') 
 
-    @include('userstory.userdata.content'.$user_id)
+    @include('userstory.userdata.content1')
 
 
     <!-- Parallax -->
