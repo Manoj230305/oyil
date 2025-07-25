@@ -23,9 +23,9 @@
             </div>
         </div>
     </section>
-    @if (View::exists('userstory.usr_images.gallery'.$user_id))
-        @include('userstory.usr_images.gallery'.$user_id)
-    @endif
+    {{-- @if (View::exists('userstory.usr_images.gallery'.$user_id)) --}}
+        @include('userstory.usr_images.gallery1') 
+    {{-- @endif --}}
     @include('userstory.contact')
     @include('userstory.footers.footer')
     @include('userstory.footers.dependency')
