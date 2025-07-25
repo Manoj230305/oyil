@@ -1,4 +1,4 @@
-<!-- @if (View::exists('userstory.userdata.content'.$user_id)) -->
+{{-- @if (View::exists('userstory.userdata.content'.$user_id)) --}}
     @include('userstory.headers.top') 
     @include('userstory.headers.header') 
 
@@ -30,6 +30,6 @@
     @include('userstory.footers.footer')
     @include('userstory.footers.dependency')
 
-<!-- @else -->
+{{-- @else --}}
     @include('errors.404')
-<!-- @endif -->
+{{-- @endif --}}
