@@ -8179,13 +8179,14 @@ strong {
   position: fixed;
   z-index: 999;
   top: 50%;
-  right: 50px;
+  right: 20px;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
+  transform: translateY(-50%);
+  pointer-events: none; }
   @media (max-width: 767.98px) {
     .navbar {
-      right: 20px; } }
+      right: 10px; } }
 
 .navbar .nav-menu {
   margin: 0;
@@ -8200,7 +8201,8 @@ strong {
 .navbar .nav-menu li .dot {
   display: block;
   color: #fff;
-  padding: 5px 0; }
+  padding: 5px 0;
+  pointer-events: auto; }
 
 .navbar .nav-menu li .dot::before,
 .navbar .nav-menu li .dot::after {
@@ -10000,8 +10002,10 @@ textarea.form-control {
 .hero-wrap {
   position: relative;
   height: 100vh;
-  overflow: hidden;
-}
+  overflow: hidden; }
+  @media (max-width: 767.98px) {
+    .hero-wrap {
+      height: 60vh !important; } }
 
 .swiper-container {
   width: 100%;
@@ -10012,8 +10016,10 @@ textarea.form-control {
   position: relative;
   background-size: cover;
   background-position: center;
-  height: 100vh;
-}
+  height: 100vh; }
+  @media (max-width: 767.98px) {
+    .swiper-slide {
+      height: 60vh !important; } }
 
 .overlay {
   position: absolute;
